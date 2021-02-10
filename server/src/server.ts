@@ -45,11 +45,13 @@
 // }); //quero criar um usuário
 
 import express from 'express';
+import cors from 'cors';
 import routes from './routes';
 import path from 'path';
 // Quando usamos typescript precisamos passar também a definição de tipos
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
